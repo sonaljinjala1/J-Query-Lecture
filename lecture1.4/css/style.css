@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.count-area {
+    position: relative;
+
+    padding: 100px 0;
+    text-align: center;
+    color: #f5efef;
+}
+
+.count-area-content {
+    margin-top: 30px;
+}
+
+.count-area i {
+    font-size: 48px;
+}
+
+.count-digit {
+    margin: 20px 0px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.count-title {
+    font-size: 20px;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.counter-slider {
+    background-color: #181818;
+    position: relative;
+    height: 400px;
+    z-index: -1;
+}
+
+
+.follower {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* Hace que el contenedor sea circular */
+    border-color: #000;
+    background-color: #ffe600;
+    /* Color de fondo amarillo */
+    transform: translate(-50%, -50%);
+    /* Centra el contenedor en la pantalla */
+    transform-origin: center center;
+    /* Establece el origen de la transformación en el centro */
+    position: absolute;
+    /* Posiciona el contenedor de manera absoluta en relación con el cuerpo */
+    top: -25px;
+    /* Ajusta la posición vertical del contenedor */
+    left: -25px;
+    /* Ajusta la posición horizontal del contenedor */
+    overflow: hidden;
+    /* Agregado para ocultar el contenido que se sale del contenedor */
+    z-index: 1;
+    /* Establece el índice z del contenedor para que esté por encima de los círculos */
+}
+
+/* Pseudo-elemento que actúa como el triángulo dentro del contenedor */
+.follower:before {
+    content: "";
+    border-left: 30px solid transparent;
+    /* Lado izquierdo transparente del triángulo */
+    border-right: 30px solid transparent;
+    /* Lado derecho transparente del triángulo */
+    border-top: 30px solid #000;
+    /* Lado superior del triángulo con color negro */
+    position: absolute;
+    /* Posiciona el triángulo de manera absoluta en relación con el contenedor */
+    top: 70%;
+    /* Ajusta la posición vertical del triángulo en relación con el contenedor */
+    left: 50%;
+    /* Ajusta la posición horizontal del triángulo en relación con el contenedor */
+    rotate: 90deg;
+    /* Rota el triángulo 90 grados */
+    animation: scaleTriangle 0.7s ease-in-out infinite;
+    /* Aplica la animación a la escala del triángulo */
+}
+
+/* Animación para escalar el triángulo */
+@keyframes scaleTriangle {
+
+    0%,
+    100% {
+        transform: translate(-40%, -70%);
+        /* Escala del triángulo al 100% y -70% de desplazamiento */
+    }
+
+    50% {
+        transform: translate(-40%, 67%);
+        /* Escala del triángulo al 50% y 67% de desplazamiento */
+    }
+}
+
+
+#cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #0af979;
+    border-radius: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    transition: transform ease-out 10ms;
+}
+
+#stalker {
+    position: fixed;
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 40px;
+    height: 40px;
+    background-color: #c6c2c2;
+    opacity: 30%;
+    border-radius: 100%;
+    pointer-events: none;
+    transition: transform ease-out 100ms;
+    z-index: 999;
+}

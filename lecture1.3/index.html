@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>effect proparty</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row justify-between">
+
+                <div class="logo">
+                    <h1>logo</h1>
+                </div>
+
+                <div class="menu">
+                    <ul class="row align-items">
+                        <li>
+                            <a href="#">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="#">GALLARY</a>
+                        </li>
+                        <li>
+                            <a href="#">CONTENT</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="toggle   d-sm-none ">
+                    <h1>toggle</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <button class="hide">hide</button>
+    <button class="show">show</button>
+    <button class="fadeoin">fadein</button>
+    <button class="fadeout">fadeout</button>
+    <button class="fadetoggle">fadetoggle</button>
+    <button class="slideup">slideup</button>
+    <button class="slidedown">slidedown</button>
+    <button class="slidetoggle">slidetoggle</button>
+    <button class="addclass">addclass</button>
+    <button class="removeclass">removeclass</button>
+    <button class="toggleclass">toggleclass</button>
+
+
+    <div class="box">
+        LorHTML (Hypertext Markup Language)- HTML provides the structure and organization of content on a webpage.
+        CSS (Cascading Style Sheet)- Responsible for styling and layout, CSS enhances the presentation of HTML elements,
+        making the application visually appealing.
+        JavaScript- It is used to add interactions to the web pages. Advancement in JavaScript has given rise to many
+        popular front- end frameworks like React, Angular and Vue.js etc.em ipsum dolor sit, amet consectetur
+        adipisicing elit. Velit, recusandae corrupti eveniet eos iusto sint. Totam earum cumque ratione, accusantium
+        debitis sed magnam numquam excepturi, sint, dolorum velit. Accusantium, eveniet!
+
+    </div>
+
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //effect proparty://
+            //1//
+            $(".hide").click(function () {
+                $(".box").hide(1000);
+            });
+            $(".show").click(function () {
+                $(".box").show(1000);
+            });
+
+            //2//
+            $(".fadein").click(function () {
+                $(".box").fadeIn(1000);
+            });
+            $(".fadeout").click(function () {
+                $(".box").fadeOut(1000);
+            });
+            $(".fadetoggle").click(function () {
+                $(".box").fadeToggle(1000);
+            });
+
+
+            //3//
+            $(".slideup").click(function () {
+                $(".box").slideUp(1000);
+            });
+            $(".slidedown").click(function () {
+                $(".box").slideDown(1000);
+            });
+            $(".slidetoggle").click(function () {
+                $(".box").slideToggle(1000);
+            });
+
+
+            //4//
+            $(".addclass").click(function () {
+                $(".box").addClass("edit");// edit ma agal . mukvo nahi//
+            });
+            $(".removeclass").click(function () {
+                $(".box").removeClass("edit");
+            });
+            $(".toggleclass").click(function () {
+                $(".box").toggleClass("edit");
+            });
+
+            //$(".toggle").toggle(function(){
+            //$(".menu").slideToggle(1000);
+            // });
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>
